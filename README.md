@@ -4,7 +4,7 @@
 
 [![ci](https://github.com/lex2193/wkhtmltopdf/actions/workflows/docker.yml/badge.svg)](https://github.com/lex2193/wkhtmltopdf/actions/workflows/docker.yml)
 
-The server is starting by default on localhost, port 80, this could be overrided using **HOST** and **PORT** variables.
+The server is starting by default on port 80, this could be overrided using the **PORT** variable.
 
 To convert a pdf, generate a post request with the html content as body, you can also add the following parameters in query:
 - **grayscale**
