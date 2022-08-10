@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.14
 ENV NODE_ENV=production
 RUN apk add --update nodejs npm wkhtmltopdf
 WORKDIR /app
