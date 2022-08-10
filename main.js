@@ -19,7 +19,7 @@ http
       }
       let proc = spawn('wkhtmltopdf', [...args, '-q', '-', '-']);
       req.pipe(proc.stdin);
-      res.writeHead(200, { 'Content-Type', 'application/pdf' });
+      res.writeHead(200, { 'Content-Type': 'application/pdf' });
       proc.stdout.pipe(res);
     } catch (err) {
       console.error(err);
