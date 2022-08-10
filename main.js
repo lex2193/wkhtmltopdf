@@ -1,8 +1,10 @@
 import http from 'http';
 import url from 'url';
-import { spawn } from 'child_process';
+import { spawn, spawnSync } from 'child_process';
 
 const port = parseInt(process.env.PORT ?? 80);
+
+console.log(spawnSync('wkhtmltopdf', ['-V'], { encoding: 'utf-8' }));
 
 http
   .createServer((req, res) => {
