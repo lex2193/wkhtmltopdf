@@ -2,8 +2,7 @@ import http from 'http';
 import url from 'url';
 import { spawn } from 'child_process';
 
-const port = parseInt(process.env.PORT ?? 80),
-  host = process.env.HOST ?? '127.0.0.1';
+const port = parseInt(process.env.PORT ?? 80);
 
 http
   .createServer((req, res) => {
@@ -25,4 +24,4 @@ http
       res.writeHead(500).end();
     }
   })
-  .listen(port, host, () => console.log(`ready (http://${host}:${port})`));
+  .listen(port, () => console.log(`ready (port ${port})`));
